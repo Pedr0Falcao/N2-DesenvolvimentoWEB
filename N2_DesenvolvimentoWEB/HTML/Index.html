@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Paciente</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulário de Paciente</h2>
+        <form id="pacienteForm" action="recebe_dados.php" method="POST">
+            <div class="form-group">
+                <label for="paciente">Paciente:</label>
+                <input type="text" id="paciente" name="paciente" maxlength="50" placeholder="Digite o nome do paciente" required>
+            </div>
+            <div class="form-group">
+                <label>Sexo:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="sexo" value="Masculino" required> Masculino</label>
+                    <label><input type="radio" name="sexo" value="Feminino" required> Feminino</label>
+                    <label><input type="radio" name="sexo" value="Nao_Responder" required> Prefiro não responder</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Gênero:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="genero" value="Masculino" required> Masculino</label>
+                    <label><input type="radio" name="genero" value="Feminino" required> Feminino</label>
+                    <label><input type="radio" name="genero" value="Transgenero" required> Transgênero</label>
+                    <label><input type="radio" name="genero" value="Genero_Neutro" required> Gênero Neutro</label>
+                    <label><input type="radio" name="genero" value="Nao_Binario" required> Não-Binário</label>
+                    <label><input type="radio" name="genero" value="AGenero" required> Agênero</label>
+                    <label><input type="radio" name="genero" value="Pangenero" required> Pangênero</label>
+                    <label><input type="radio" name="genero" value="Genderqueer" required> Genderqueer</label>
+                    <label><input type="radio" name="genero" value="Two_Spirit" required> Two-Spirit</label>
+                    <label><input type="radio" name="genero" value="Terceiro_Genero" required> Terceiro Gênero</label>
+                    <label><input type="radio" name="genero" value="Outro" required> Outro</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rg">R.G.:</label>
+                <input type="text" id="rg" name="rg" pattern="\d{10}" maxlength="10" placeholder="Digite o R.G. do paciente" required>
+            </div>
+            <div class="form-group">
+                <label for="cns">CNS:</label>
+                <input type="text" id="cns" name="cns" pattern="\d{12}" maxlength="12" placeholder="Digite o Cartão SUS do paciente" required>
+            </div>
+            <div class="form-group">
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="+55 (11) 99999-9999" required>
+            </div>
+            <div class="form-group">
+                <label for="nome_mae">Nome da Mãe:</label>
+                <input type="text" id="nome_mae" name="nome_mae" maxlength="50" placeholder="Digite o nome da mãe" required>
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" pattern="\d{4,5}-\d{3}" placeholder="0000-000" required>
+            </div>
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" disabled>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número e Complemento:</label>
+                <input type="text" id="numero" name="numero" pattern="\d{1,5}" maxlength="5" required>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" disabled>
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade ou Município:</label>
+                <input type="text" id="cidade" name="cidade" disabled>
+            </div>
+            <div class="form-group">
+                <label for="estado">UF ou Estado:</label>
+                <input type="text" id="estado" name="estado" disabled>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" pattern=".+@.+\..+" placeholder="Digite o e-mail">
+            </div>
+            <div class="form-group">
+                <label for="doenca">Doença:</label>
+                <select id="doenca" name="doenca" required>
+                    <option value="Nefrite">Nefrite</option>
+                    <option value="Conjutivite">Conjutivite</option>
+                    <option value="Renite">Renite</option>
+                    <option value="Asma">Asma</option>
+                    <option value="Tendinite">Tendinite</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../JS/scripts.js"></script>
+</body>
+</html>
